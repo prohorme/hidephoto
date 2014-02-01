@@ -1,6 +1,3 @@
-// Код букмарклета: (да, оно требует jquery, да, мы настолько обленились :D)
-// javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://code.jquery.com/jquery-1.10.1.min.js';document.body.appendChild(document.createElement('script')).src='https://gist.github.com/vladkorotnev/6460898/raw';})();
-
 var iteration = 0;  // ограничение на количество фото
 var limitation= 0; // итерация текущая
 var fb = undefined; // тут будет фастбокс
@@ -22,7 +19,7 @@ var sas = function() {
   } catch(e) {
     console.log('DEPH ERROR '+e); // ну ошибка, ну в логи ее
     fb.hide(); // прячем фастбокс
-    showFastBox('vkDephotify Error','Ошибка произошла на фотографии '+iteration.toString()+'<br>'+e.toString()); // ошибку пишем
+    showFastBox('VK HidePhoto Error','Ошибка произошла на фотографии '+iteration.toString()+'<br>'+e.toString()); // ошибку пишем
     return; // убиваемсо
   } //try
   iteration = iteration + 1; // следующая итерация цикла
@@ -39,7 +36,7 @@ var dephotify = function() {
   }
   limitation = parseInt(input); // парсим цифру в переменную ограничения
   sas(); // запускаем сас
-  fb = showFastBox('vkDephotify by vladkorotnev, 2013','Идет скрытие фотографий, подождите...'); // делаем фастбокс
+  fb = showFastBox('VK HidePhoto','Идет скрытие фотографий, подождите...'); // делаем фастбокс
   fb.removeButtons(); // отбираем у него кнопки
   fb.showProgress(); // показываем пиликалку прогресса
   $('.box_x_button')[0].style.display="none"; // выпиливаем крестик закрытия
@@ -57,7 +54,3 @@ var main = function() {
 
 // после всего этого, то есть как скрипт загрузится, запускаем точку входа!
 main();
-
-
-// by Akasaka, 2013
-// Да-да, прямо таки мастер реверсинга ВК, столько всего написал :D
