@@ -45,7 +45,7 @@ var firstBox = undefined;
 
 var main = function() {
   
-  firstBox = showFastBox('VK HidePhoto','How many photos can be removed from the panel?','Hide', function() { dephotify(); }, 'Отменить');
+  firstBox = showFastBox('VK HidePhoto','How many photos can be removed from the panel?','Hide', function() { dephotify(); }, 'Cancel');
   
   firstBox.bodyNode.innerHTML =  firstBox.bodyNode.innerHTML + "<br><input type=\"text\" id=\"depho_amt\" placeholder=\"Nubmer, example 10\" value=\"10\">";
 }
