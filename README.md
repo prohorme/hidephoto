@@ -1,4 +1,0 @@
-hidephoto
-=========
-
-HidePhoto
